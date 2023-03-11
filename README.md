@@ -1,4 +1,4 @@
-# production-project
+# Description
 This project is a website that is designed to publish articles. It allows users to create their own articles, share their thoughts and ideas with other people, and read articles published by other users.
 
 The site is developed using modern web development technologies, including HTML, CSS, JavaScript, React, TypeScripte and Redux. It has a user-friendly and intuitive interface that allows users to easily create and edit their articles.
