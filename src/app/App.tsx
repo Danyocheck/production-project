@@ -1,18 +1,23 @@
-import './styles/index.scss'
-import {useTheme} from "app/providers/ThemeProvider";
-import {classNames} from "shared/lib/classNames";
-import {AppRouter} from "app/providers/router";
-import {Navbar} from "widgets/Navbar";
+import './styles/index.scss';
+import { useTheme } from 'app/providers/ThemeProvider';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { AppRouter } from 'app/providers/router';
+import { Navbar } from 'widgets/Navbar';
+import { Sidebar } from 'widgets/Sidebar';
+import { useState } from 'react';
 
-const App = () => {
-    const {theme, toggleTheme} = useTheme()
+function App() {
+    const { theme } = useTheme();
+    const [showModal, setShowModal] = useState(false);
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Navbar />
-            <AppRouter />
-            <button onClick={toggleTheme}>Сменить тему</button>
+            <Navbar showModal={showModal} setShowModal={setShowModal} />
+            <div>
+                <Sidebar showModal={showModal} setShowModal={setShowModal} />
+                <AppRouter />
+            </div>
         </div>
-    )
+    );
 }
 
-export default App
+export default App;

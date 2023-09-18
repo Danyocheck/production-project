@@ -1,0 +1,30 @@
+.Button {
+    cursor: pointer;
+}
+
+.clear {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.border-light,
+.border-dark {
+    padding: 0;
+    margin: 0;
+    border-width: thin;
+    border-style: solid;
+    border-radius: 7px;
+    background: none;
+    outline: none;
+}
+
+.border-dark {
+    border-color: #8d8d8d;
+}
+
+.border-light {
+    border-color: #a59999;
+}
